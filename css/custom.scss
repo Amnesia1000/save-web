@@ -1,0 +1,145 @@
+$font-family-sans-serif: 'Barlow Semi Condensed', sans-serif;
+
+$primary:#733FC8;
+$success: #49556B;
+$dark: #18202D;
+$secondary: #EDF2F8;
+
+@media (min-width: 992px) {
+    .alto-100 {
+        height: 100vh;
+    }
+}
+
+body {
+    background: #fff;
+    transition: .3s ease all;
+
+    &.dark {
+        background: rgb(47,47,47);
+        transition: .3s ease all;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: rgb(47,47,47);
+        transition: .3s ease all;
+        &.light {
+            color: var(--bs-body-color);
+            background: #fff;
+            transition: .3s ease all;
+        }
+    }
+}
+
+nav {
+    background: rgb(47,47,47);
+    border-radius: 5px;
+    a.nav-link {
+        color: #F1F1F1;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: 600;
+        &:hover {
+            color: #733FC8;
+        }
+    }
+    
+    }
+    a.navbar {
+        color: #F1F1F1;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    body.dark & {
+        background: #fff;
+        a.nav-link {
+            color: rgb(47,47,47);
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-weight: 600;
+            &:hover {
+                color: #733FC8;
+            }
+        }
+        a.navbar {
+            color: rgb(47,47,47);
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    }
+  }
+
+.switch {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        background: #F1F1F1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s easy all;
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+    }
+
+    &.active {
+        background: orange;
+        color: #000;
+        &::after {
+            right: 0;
+            left: unset;
+        }
+    }
+
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+
+.pr {
+    padding-right: 3px;
+}
+
+.contenedor {
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+  }
+
+.d-flex img {
+    width: 50px;
+}
+
+.fondo-card {
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 85% top;
+}
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px,
+  xxl: 960px
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
